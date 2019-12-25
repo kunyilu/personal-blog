@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<section class="main post-detail">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read
+    </p>
+  </header>
+  {{ partial "adsense.html" . }}
+  <article class="post-content">
+    <h3>Table of Contents</h3>
+    {{ .TableOfContents }}
+    {{ .Content }}
+  </article>
+  <footer class="post-footer">
+    {{ if isset .Params "tags" }}
+    <ul class="post-tags">
+      {{ range $tag := .Params.tags }}
+      <li class="post-tag"><a href="/tags/{{ $tag | urlize }}"><span class="tag">{{ $tag | title }}</span></a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+<!--     <div class="sharing">
+        {{ partial "addthis" . }}
+  
+         some content !
+  
+        {{ partial "addthis-script" . }}
+    </div> -->
+
+    <!-- <div id="newsletter">
+      <div class="container">
+        <div class="description"> Get notified when I write something cool. </div>
+
+        <form id="subscribe-form" action="https://tinyletter.com/bolajiayodeji" method="post" target="popupwindow"
+          onsubmit="window.open('https://tinyletter.com/bolajiayodeji', 'popupwindow', 'scrollbars=yes,width=800,height=500');return true">
+
+          <div class="email-group">
+            <label for="email" class="sr-only"> Email </label>
+            <input type="email" id="email" name="email" placeholder=" Your Email Address... " required>
+            <button class="button" type="submit"> Subscribe 📩</button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+
+    <!-- <div id="disqus_thread"></div>
+    <div id="codefund"></div>
+    <script async custom-element="amp-iframe">
+      (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bolajiayodeji-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript> -->
+
+
+  </footer>
+</section>
+{{ partial "footer.html" . }}
+{{ end }}

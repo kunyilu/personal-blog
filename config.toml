@@ -1,0 +1,48 @@
+baseURL = "https://kunyilu.com/"
+languageCode = "en-us"
+title = "Kunyi Lu"
+theme = "hugo-lamp"
+# googleAnalytics = "UA-123719673-3"          # Google Analytics UA number
+
+[params]
+  titleName = "Hi, I'm Kunyi."
+  subtitle = "I am a Software Development Engineer in Amazon."
+  # about = "About Me →"
+  author = "Kunyi Lu"
+  logo = "https://res.cloudinary.com/iambeejayayo/image/upload/v1566876795/website/favicon.png"
+  description = "Articles, all written by Kunyi Lu."
+  paginate = 10
+
+  # Addthis
+  addThis = "ra-5c60f134dfdba39d"
+
+  # Publisher
+  ## adsensePublisher = "ca-pub-XXX"    # Required if you want to include Google Adsense
+  # adsenseSlot = "XXX"                   # Required slot to display ads
+  # adsenseSlotSticky = "XXX"             # Enables sticky ads feature, value maybe the same with adsenseSlot, remove if you don't want display sticky ads
+
+  # SEO configs
+  # seotitle = "Kunyi Lu"
+  # googleSiteVerification = "3BSMr7WxHkkxpM0Kfol42yWYvocFLiKQ3GPjsUSYnuk"    # Google Webmaster
+  # msValidate = "bing_site_verification_code"                  # Bing Webmaster
+
+  # Social networks
+  github = "kunyilu"
+  linkedin = "kunyilu"
+  instagram = "lu_kunyi"
+  youtube = "UCbxpQ_QZJk4f9QrUuj_e2pw"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  identifier = "home"
+  url = "/"
+# [[menu.main]]
+#  name = "Search"
+#  weight = 2
+#  identifier = "search"
+#  url = "/search"
