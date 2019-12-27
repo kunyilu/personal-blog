@@ -48,7 +48,7 @@ In general, internet is transforming everything. It ties together different netw
 2. propagation delay: how long does it take to move one bit from one end of a link to the other?
    - due to link properties
 
-> **Terminology**: a network link</br>
+> a network link</br>
 > BDP: Bandwidth-Delay Product: number of bits "in flight" at any time(Bandwidth \* Propagation delay)
 
 3. queuing delay: how long does a packet have to sit in a buffer before it is processed?
@@ -56,7 +56,7 @@ In general, internet is transforming everything. It ties together different netw
 4. processing delay: how long does the switch take to process a packet?
    - due to traffic mix and switch internals
 
-> **Terminology**: Round Trip Time(RTT)</br>
+> Round Trip Time(RTT)</br>
 > Definition: Time for a packet to go from a source to a destination and to come back</br>
 > Measuring delay is hard from one end
 
@@ -86,8 +86,7 @@ OSI stands for Open Systems Interconnection model
 - Session and presentation layers are often implemented as part of the application layer
 - Lower three layers implemented everywhere. Top two layers implemented only at hosts
 
-> **Terminology**: Protocols
->
+> Protocols </br>
 > 1. Communication between peer layers on different systems is defined by protocols
 > 2. An agreement between parties on how to communication
 > 3. Defines the **syntax** and **semantics** of communication
@@ -114,8 +113,7 @@ OSI stands for Open Systems Interconnection model
 - URL: naming content
 
 > URL: Uniform Record Locator</br>
-> protocol: //host-name[:port]/directory-path/resource
->
+> protocol: //host-name[:port]/directory-path/resource </br>
 > - protocol: http, ftp, https, smtp, rtsp, ...
 > - hostname: DNS name, IP address(extend the idea of hierarchical hostnames to include anything in a file system)
 > - port: defaults to protocal's standard port(http: 80, https: 443)
@@ -281,3 +279,47 @@ We can use persistent and pipelined connections together to improve efficiency.
   - many services(mail, www) on same machine
   - aliases like www.cnn.com and cnn.com
 - the flexibility applies only within domain
+
+# Video Streaming and Cloud Systems
+
+## Video streaming
+
+### Video medium
+
+- often too large to send in one GET
+- compression is key
+  - lots of algorithms to compress
+
+### HTTP streaming
+
+- video is stored at an HTTP server with a URL
+- clients send a GET request for the URL
+- server sends the video file as a stream
+- client first buffers for a while
+- once the buffer reaches a threshold, the video plays in the foreground and more frames are downloaded in the background
+- same bitrate for all clients. cannot dynamically adapt to conditions
+  - Solution: DASH: Dynamic Adaptive Streaming over HTTP
+
+## Datacenters
+
+> Datacenter networks </br>
+> Tens to hundreds of thousands of hosts, often closely coupled, in close proximity </br>
+> Core -> Aggregation -> Rack
+
+- forms the backend of modern web services
+- partition-aggregate traffic
+- less than 200 milliseconds between receiving user query in the browser and displaying the results
+
+# Transport Layer
+
+
+
+# TCP Basics
+
+# Flow and Congestion Control
+
+# More Congestion Control
+
+# Network Layer and IP
+
+# IP Routers
