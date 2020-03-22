@@ -48,17 +48,17 @@ In general, internet is transforming everything. It ties together different netw
 2. propagation delay: how long does it take to move one bit from one end of a link to the other?
    - due to link properties
 
-> a network link</br>
-> BDP: Bandwidth-Delay Product: number of bits "in flight" at any time(Bandwidth \* Propagation delay)
+    > a network link</br>
+    > BDP: Bandwidth-Delay Product: number of bits "in flight" at any time(Bandwidth \* Propagation delay)
 
 3. queuing delay: how long does a packet have to sit in a buffer before it is processed?
    - due to traffic mix and switch internals
 4. processing delay: how long does the switch take to process a packet?
    - due to traffic mix and switch internals
 
-> Round Trip Time(RTT)</br>
-> Definition: Time for a packet to go from a source to a destination and to come back</br>
-> Measuring delay is hard from one end
+    > Round Trip Time(RTT)</br>
+    > Definition: Time for a packet to go from a source to a destination and to come back</br>
+    > Measuring delay is hard from one end
 
 #### Loss
 
@@ -87,17 +87,17 @@ OSI stands for Open Systems Interconnection model
 - Lower three layers implemented everywhere. Top two layers implemented only at hosts
 
 > Protocols </br>
-> 1. Communication between peer layers on different systems is defined by protocols
-> 2. An agreement between parties on how to communication
-> 3. Defines the **syntax** and **semantics** of communication
+> 1. Communication between peer layers on different systems is defined by protocols <br/>
+> 2. An agreement between parties on how to communication <br/>
+> 3. Defines the **syntax** and **semantics** of communication <br/>
 > 4. Protocols exist at many levels</br>
 
-    *L7 Application*: SMTP, HTTP, DNS, NTP</br>
-    *L4 Transport*: TCP, UDP</br>
-    *L3 Network*: IP</br>
-    *L2 Data link*: Ethernet, FDDI, PPP</br>
-    *L1 Physical*: Optical, Copper, Radio, PSTN</br>
-    Note: IP is the narrow waist of the layering hourglass
+  > *L7 Application*: SMTP, HTTP, DNS, NTP</br>
+  > *L4 Transport*: TCP, UDP</br>
+  > *L3 Network*: IP</br>
+  > *L2 Data link*: Ethernet, FDDI, PPP</br>
+  > *L1 Physical*: Optical, Copper, Radio, PSTN</br>
+  Note: IP is the narrow waist of the layering hourglass
 
 # HTTP and the Web
 
@@ -112,13 +112,13 @@ OSI stands for Open Systems Interconnection model
 
 - URL: naming content
 
-> URL: Uniform Record Locator</br>
-> protocol: //host-name[:port]/directory-path/resource </br>
-> - protocol: http, ftp, https, smtp, rtsp, ...
-> - hostname: DNS name, IP address(extend the idea of hierarchical hostnames to include anything in a file system)
-> - port: defaults to protocal's standard port(http: 80, https: 443)
-> - directory path: hierarchical, reflecting file system
-> - resource: indentifies the desired resource
+  > URL: Uniform Record Locator</br>
+  > protocol: //host-name[:port]/directory-path/resource </br>
+  > - protocol: http, ftp, https, smtp, rtsp, ...
+  > - hostname: DNS name, IP address(extend the idea of hierarchical hostnames to include anything in a file system)
+  > - port: defaults to protocal's standard port(http: 80, https: 443)
+  > - directory path: hierarchical, reflecting file system
+  > - resource: indentifies the desired resource
 
 - HTML: formatting content
 
@@ -208,10 +208,10 @@ We can use persistent and pipelined connections together to improve efficiency.
 
 ## DNS(Domain Name System)
 
-> **Terminology** <br/>
-> machine addresses: e.g. 141.212.113.143 <br/>
-> machine names: e.g. cse.umich.edu <br/>
-> DNS: a directory service which tells us how we map from one to the other
+  > **Terminology** <br/>
+  > machine addresses: e.g. 141.212.113.143 <br/>
+  > machine names: e.g. cse.umich.edu <br/>
+  > DNS: a directory service which tells us how we map from one to the other
 
 ### Goals
 

@@ -49,7 +49,7 @@ draft: false
     ORDER BY c2 ASC;
 ```
 
-Note: ASC denotes ascending order(default), DESC denotes descending order
+    Note: ASC denotes ascending order(default), DESC denotes descending order
 
 8. **BETWEEN**: match a value against a range of values. Can use <, > mathematical functions instead. e.g.
 
@@ -65,7 +65,7 @@ Note: ASC denotes ascending order(default), DESC denotes descending order
     WHERE c1 IN (value1, value2, ...);
 ```
 
-Use sub query:
+    Use sub query:
 
 ```sql
     SELECT c1 FROM tbl1
@@ -83,7 +83,7 @@ Use sub query:
   - %: match any sequence of chars
   - -: match any single char
 
-Note: **LIKE** is case-sensitive, whereas **ILIKE** is case-insensitive
+    Note: **LIKE** is case-sensitive, whereas **ILIKE** is case-insensitive
 
 ## GROUP BY Statements
 
@@ -102,7 +102,7 @@ Note: **LIKE** is case-sensitive, whereas **ILIKE** is case-insensitive
     GROUP BY c1
 ```
 
-**GROUP BY** will group by distinct values. For each distinct value, we do aggregate function.
+    **GROUP BY** will group by distinct values. For each distinct value, we do aggregate function.
 
 3. **HAVING**: use with **GROUP BY** clause to filter group rows that do not satisfy a specific condition
 
@@ -113,7 +113,7 @@ Note: **LIKE** is case-sensitive, whereas **ILIKE** is case-insensitive
     HAVING c2 > v;
 ```
 
-Note: **WHERE** and **HAVING** are similar. But **WHERE** applies before **GROUP BY** and **HAVING** applies after **GROUP BY**
+    Note: **WHERE** and **HAVING** are similar. But **WHERE** applies before **GROUP BY** and **HAVING** applies after **GROUP BY**
 
 4. **AS**: rename columns or table selections with an alias
 
@@ -127,11 +127,12 @@ Note: **WHERE** and **HAVING** are similar. But **WHERE** applies before **GROUP
     INNER JOIN B ON A.pka = B.fka;
 ```
 
-returns rows in A table that have the corresponding rows in B table
+    returns rows in A table that have the corresponding rows in B table
 
-> **JOIN** Types
-> There are several types of JOIN: INNER JOIN, FULL OUTER JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN.
-> ![JOIN Type Venn Graph](../image/sql.md/sql_venn_graph.jpg)
+    > **JOIN** Types
+    > There are several types of JOIN: INNER JOIN, FULL OUTER JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN.
+
+    ![JOIN Type Venn Graph](../../static/img/sql.md/sql_venn_graph.jpg)
 
 2. **UNION**: combines result sets of two or more **SELECT** statements into a single result set
 
@@ -143,7 +144,7 @@ returns rows in A table that have the corresponding rows in B table
     FROM t2;
 ```
 
-We usually use **UNION** to combine data from similar tables that are not perfectly normalized
+    We usually use **UNION** to combine data from similar tables that are not perfectly normalized
 
 ## Advanced Commands
 
@@ -177,7 +178,7 @@ We usually use **UNION** to combine data from similar tables that are not perfec
     FROM customer;
 ```
 
-where || denotes string concatenation.
+    where || denotes string concatenation.
 
 4. SubQuery
    To construct a subquery, we put the second query in brackets and use it in the **WHERE** clause as an expression
@@ -197,7 +198,7 @@ where || denotes string concatenation.
     ON a.first_name = b.last_name;
 ```
 
-the same as
+    the same as
 
 ```sql
     SELECT a.customer_id, a.first_name, a.last_name, b.customer_id, b.first_name, b.last_name
