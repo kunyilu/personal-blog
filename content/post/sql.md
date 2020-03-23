@@ -132,7 +132,7 @@ draft: false
     > **JOIN** Types
     > There are several types of JOIN: INNER JOIN, FULL OUTER JOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN.
 
-    ![JOIN Type Venn Graph](../../static/img/sql.md/sql_venn_graph.jpg)
+<center><img src="/img/sql.md/sql_venn_graph.jpg" alt="JOIN Type Venn Graph" height="400" width="600"/></center>
 
 2. **UNION**: combines result sets of two or more **SELECT** statements into a single result set
 
